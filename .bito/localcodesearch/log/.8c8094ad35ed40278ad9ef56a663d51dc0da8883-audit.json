@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "c:\\Users\\hospice.ahouandjinou\\.bito\\localcodesearch\\log\\.8c8094ad35ed40278ad9ef56a663d51dc0da8883-audit.json",
+    "files": [
+        {
+            "date": 1736158350930,
+            "name": "c:\\Users\\hospice.ahouandjinou\\.bito\\localcodesearch\\log\\log.json-2025-01-06-11.log",
+            "hash": "f5881249f184f8f64f375f68b2c43e7f659853f27f4de5593fd5e3caaad14300"
+        }
+    ],
+    "hashType": "sha256"
+}
