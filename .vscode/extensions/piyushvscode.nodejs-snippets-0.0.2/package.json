@@ -1,0 +1,33 @@
+{
+	"name": "nodejs-snippets",
+	"displayName": "Nodejs Snippets",
+	"description": "Simple And Fast code snippets for nodejs and expressjs",
+	"version": "0.0.2",
+	"publisher": "piyushvscode",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "d7c404da-af23-4188-ab73-945ea74d9863",
+		"publisherId": "f214da94-7823-4c11-bb94-c998c3bb05a9",
+		"publisherDisplayName": "piyushvscode",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1726652946310,
+		"preRelease": false
+	}
+}
