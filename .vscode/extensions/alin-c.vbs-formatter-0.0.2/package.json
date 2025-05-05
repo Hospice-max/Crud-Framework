@@ -1,0 +1,101 @@
+{
+	"name": "vbs-formatter",
+	"displayName": "VBS Formatter",
+	"description": "Format VBScript and VBA files.",
+	"publisher": "alin-c",
+	"version": "0.0.2",
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"categories": [
+		"Other",
+		"Formatters"
+	],
+	"icon": "images/icon.png",
+	"pricing": "Free",
+	"activationEvents": [
+		"onLanguage:vbs",
+		"onLanguage:vba",
+		"onLanguage:VBScript",
+		"onLanguage:vb"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "VBS Formatter",
+			"properties": {
+				"vbsFormatter.level": {
+					"type": "number",
+					"default": 0,
+					"description": "Indent level to start off"
+				},
+				"vbsFormatter.breakOnSeparator": {
+					"type": "boolean",
+					"default": false,
+					"description": "Break the line on occurrences of the ':' statement separator"
+				},
+				"vbsFormatter.removeComments": {
+					"type": "boolean",
+					"default": false,
+					"description": "Remove comments from the input"
+				}
+			}
+		},
+		"commands": [
+			{
+				"when": "!editorReadonly && resourceExtname =~ /\\.bas$|\\.cls$|\\.vbs$|\\.vb$|\\.frm$/",
+				"command": "extension.pretty",
+				"title": "VBS Formatter"
+			}
+		],
+		"keybindings": [
+			{
+				"when": "!editorReadonly && resourceExtname =~ /\\.bas$|\\.cls$|\\.vbs$|\\.vb$|\\.frm$/",
+				"command": "extension.pretty",
+				"key": "shift+alt+f"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "!editorReadonly && resourceExtname =~ /\\.bas$|\\.cls$|\\.vbs$|\\.vb$|\\.frm$/",
+					"command": "extension.pretty",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "vscode-test"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.90.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "22.x",
+		"eslint": "^8.54.0",
+		"typescript": "^5.3.2",
+		"@vscode/test-cli": "^0.0.4",
+		"@vscode/test-electron": "^2.3.8"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alin-c/vbs-formatter.git"
+	},
+	"homepage": "https://github.com/alin-c/vbs-formatter",
+	"__metadata": {
+		"id": "88f62779-ba79-4131-9ee5-52054fee8bab",
+		"publisherDisplayName": "Alin Clincea",
+		"publisherId": "f6b6921c-07e9-4e18-a044-2db47544c973",
+		"isPreReleaseVersion": false,
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1739192485121,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "Basic Start Template": {
+    "prefix": "!start",
+    "body": [
+      "const express = require('express');",
+      "const bodyParser = require('body-parser');",
+      "\n\nconst app = express();",
+      "\n// Middlewares",
+      "\napp.use(bodyParser.urlencoded({extended:false}));",
+      "app.use(express.static('public'));",
+      "app.set('view engine', 'pug'); // Specify your template engine",
+      "\n\nconst PORT = process.env.PORT || 3000",
+      "\n\n// Routes",
+      "app.get('/',(req,res)=>{",
+      "\tres.send('Homepage')",
+      "\t$2",
+      "\n});",
+      "\n\n",
+      "app.listen(PORT,()=>console.log(`Server Started at Port \\${PORT}\n=> http://localhost:\\${PORT}`))"
+    ],
+    "description": "Express Start Snippet"
+  },
+  "Get Route": {
+    "prefix": "!get",
+    "body": ["app.get('/$1',(req,res)=>{", "\t$2", "\n});"],
+    "description": "Expess Get Route"
+  },
+  "Post Route": {
+    "prefix": "!post",
+    "body": ["app.post('/$1',(req,res)=>{", "\t$2", "\n});"],
+    "description": "Expess Get Route"
+  }
+}
