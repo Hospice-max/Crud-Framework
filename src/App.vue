@@ -10,12 +10,13 @@
 
     <main class="main-content">
       <!-- Message d'accueil avec émoji et bouton circulaire -->
-      <div v-if="showLoading" class="loading-overlay">
+      <!-- <div v-if="showLoading" class="loading-overlay">
         <div class="welcome-message">
           <p>Bienvenue sur l'interface de gestion des Utilisateurs! 😊</p>
           <button class="start-button" @click="startApp">Cliquez !</button>
         </div>
-      </div>
+      </div> -->
+      
       <!-- Formulaire Dynamique en Popup -->
       <div class="form-overlay">
         <DynamicForm
@@ -159,7 +160,7 @@ provide("addNotification", addNotification);
 }
 
 /* Overlay de chargement */
-.loading-overlay {
+/* .loading-overlay {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
@@ -169,10 +170,10 @@ provide("addNotification", addNotification);
   z-index: 1000;
   flex-direction: column;
   animation: fadeIn 1.5s ease-in-out;
-}
+} */
 
 /* Message de bienvenue */
-.welcome-message {
+/* .welcome-message {
   text-align: center;
   color: #fff;
   font-size: 1.8rem;
@@ -183,7 +184,7 @@ provide("addNotification", addNotification);
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
   animation: pulseEffect 1.8s infinite alternate;
-}
+} */
 
 @keyframes pulseEffect {
   from {
@@ -196,12 +197,12 @@ provide("addNotification", addNotification);
   }
 }
 
-.welcome-message p {
+/* .welcome-message p {
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 1.5px;
-}
+} */
 
 /* Bouton de démarrage */
 .start-button {
