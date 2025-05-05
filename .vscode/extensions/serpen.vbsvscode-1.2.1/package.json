@@ -1,0 +1,203 @@
+{
+	"name": "vbsvscode",
+	"displayName": "VBS",
+	"description": "VBScript Language Support",
+	"version": "1.2.1",
+	"publisher": "Serpen",
+	"icon": "assets/logo.png",
+	"galleryBanner": {
+		"color": "#6EE5E5",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"VBS",
+		"VBScript"
+	],
+	"bugs": {
+		"url": "https://github.com/Serpen/VBS-VSCode/issues"
+	},
+	"license": "MIT",
+	"main": "./dist/extension",
+	"activationEvents": [
+		"onLanguage:vbs"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Serpen/VBS-VSCode.git"
+	},
+	"homepage": "https://github.com/Serpen/VBS-VSCode",
+	"contributes": {
+		"debuggers": [
+			{
+				"type": "vbs",
+				"label": "CScript",
+				"program": "./dist/debugger/debugAdapter.js",
+				"runtime": "node",
+				"languages": [
+					"vbs"
+				],
+				"configurationAttributes": {
+					"launch": {
+						"properties": {
+							"program": {
+								"type": "string",
+								"default": "${file}"
+							}
+						}
+					}
+				},
+				"initialConfigurations": [
+					{
+						"type": "vbs",
+						"request": "launch",
+						"name": "CScript",
+						"program": "${file}"
+					}
+				],
+				"configurationSnippets": [
+					{
+						"label": "CScript",
+						"body": {
+							"type": "vbs",
+							"request": "launch",
+							"program": "${file}"
+						}
+					}
+				]
+			}
+		],
+		"languages": [
+			{
+				"id": "vbs",
+				"aliases": [
+					"VBScript",
+					"vbs"
+				],
+				"extensions": [
+					".vbs"
+				],
+				"configuration": "./syntaxes/language-configuration.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "vbs.runScript",
+				"title": "%vbs.command.vbs.runScript%"
+			},
+			{
+				"command": "vbs.killScript",
+				"title": "%vbs.command.vbs.killScript%"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vbs",
+				"scopeName": "source.vbs",
+				"path": "./syntaxes/vbs.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "vbs",
+				"path": "./snippets/vbs.json"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "VBScript",
+			"properties": {
+				"vbs.interpreter": {
+					"type": "string",
+					"default": "C:\\WINDOWS\\system32\\cscript.exe",
+					"description": "%vbs.config.interpreter.description%"
+				},
+				"vbs.includes": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [],
+					"description": "%vbs.config.includes.description%"
+				},
+				"vbs.showVariableSymbols": {
+					"type": "boolean",
+					"default": true,
+					"description": "%vbs.config.showVariableSymbols.description%"
+				},
+				"vbs.showParamSymbols": {
+					"type": "boolean",
+					"default": false,
+					"description": "%vbs.config.showParamSymbols.description%"
+				},
+				"vbs.custumIncludePattern": {
+					"type": "string",
+					"description": "%vbs.config.customIncludePattern.description%",
+					"deprecationMessage": "use customIncludePattern"
+				},
+				"vbs.customIncludePattern": {
+					"type": "string",
+					"default": "\\binclude\\b[\\t ]*\\(?[\\t ]*\"([^\"]+)\"[\\t ]*\\)?",
+					"description": "%vbs.config.customIncludePattern.description%"
+				},
+				"vbs.customIncludeDirs": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						".",
+						"${workspaceFolder}"
+					],
+					"description": "%vbs.config.customIncludeDirs.description%"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.17",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "^14.14.43",
+		"@types/vscode": "~1.43.0",
+		"@typescript-eslint/eslint-plugin": "^4.22.0",
+		"@typescript-eslint/parser": "^4.22.0",
+		"eslint": "^7.25.0",
+		"mocha": "^8.3.2",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4",
+		"vscode-test": "^1.5.2"
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint -c .eslintrc --ext .ts src",
+		"watch": "tsc -watch -p ./",
+		"test": "mocha dist/test/*.test.js",
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
+	"dependencies": {
+		"vscode-debugadapter": "^1.47.0"
+	},
+	"__metadata": {
+		"id": "2749a989-41ba-4406-b906-f7a7769eeece",
+		"publisherId": "fe58dc05-c464-4104-9850-92a48bd7d12f",
+		"publisherDisplayName": "Serpen",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1739192482827,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}
