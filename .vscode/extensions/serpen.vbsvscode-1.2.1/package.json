@@ -185,6 +185,7 @@
 		"publish": "vsce publish"
 	},
 	"dependencies": {
+		"vbsvscode": "file:",
 		"vscode-debugadapter": "^1.47.0"
 	},
 	"__metadata": {

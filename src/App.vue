@@ -5,18 +5,11 @@
     </navbar>
 
     <div class="app-secondtitle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="60" viewBox="0 0 22 22"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m-2.5-8.5q1.45 0 2.475-1.025T13 10t-1.025-2.475T9.5 6.5T7.025 7.525T6 10t1.025 2.475T9.5 13.5m7 1q1.05 0 1.775-.725T19 12t-.725-1.775T16.5 9.5t-1.775.725T14 12t.725 1.775t1.775.725M12 20q2.125 0 3.875-1t2.825-2.65q-.525-.15-1.075-.25T16.5 16q-1.325 0-3.2.775t-3 3.05q.425.1.85.138T12 20m-3.175-.65q.875-1.8 1.988-2.675T12.5 15.5q-.725-.225-1.463-.362T9.5 15q-1.125 0-2.225.275t-2.125.775q.65 1.075 1.588 1.938t2.087 1.362"/></svg>
       <h2>Systeme de Gestion des utilisateurs</h2>
     </div>
 
     <main class="main-content">
-      <!-- Message d'accueil avec émoji et bouton circulaire -->
-      <!-- <div v-if="showLoading" class="loading-overlay">
-        <div class="welcome-message">
-          <p>Bienvenue sur l'interface de gestion des Utilisateurs! 😊</p>
-          <button class="start-button" @click="startApp">Cliquez !</button>
-        </div>
-      </div> -->
-      
       <!-- Formulaire Dynamique en Popup -->
       <div class="form-overlay">
         <DynamicForm
@@ -27,7 +20,7 @@
         />
       </div>
       <!-- Tableau CRUD avec effet de flou conditionnel -->
-      <!-- <div :class="['crud-wrapper', { blurred: showForm }]">
+      <div class="crud-wrapper">
         <CrudTable
           :columns="columns"
           :items="crudStore.items"
@@ -35,7 +28,7 @@
           @delete="crudStore.deleteItem"
           @add="openForm"
         />
-      </div> -->
+      </div>
       <!-- Notifications -->
       <Notifications ref="notificationComponent" />
     </main>
@@ -117,6 +110,8 @@ provide("addNotification", addNotification);
 
 /* Contenu principal */
 .main-content {
+  display: flex;
+  justify-content: space-between;  
   margin: 0 auto;
   margin-top: 1%;
   flex-grow: 1;
@@ -124,6 +119,16 @@ provide("addNotification", addNotification);
   max-width: 100%;
   width: 75%;
 }
+
+/* Version mobile de main-content */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; 
+    width: 90%; 
+    padding: 10px; 
+  }
+}
+
 
 /* Titre */
 .app-title {
@@ -134,14 +139,19 @@ provide("addNotification", addNotification);
   text-align: center;
   padding: 20px;
   border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .app-secondtitle {
+  display: flex;
+  gap: 10px;
   margin: 0 auto;
   padding: 10px;
   font-size: 1rem;
   max-width: 100%;
   width: 80%;
+  color: #017483be;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: white;
   border-radius: 5px;
   border-bottom: 1px solid #e2e2e2eb;
@@ -159,102 +169,21 @@ provide("addNotification", addNotification);
   }
 }
 
-/* Overlay de chargement */
-/* .loading-overlay {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  flex-direction: column;
-  animation: fadeIn 1.5s ease-in-out;
-} */
-
-/* Message de bienvenue */
-/* .welcome-message {
-  text-align: center;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
-  background: linear-gradient(45deg, #ff4081, #8e2de2);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
-  animation: pulseEffect 1.8s infinite alternate;
-} */
-
-@keyframes pulseEffect {
-  from {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
-  }
-  to {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
-  }
-}
-
-/* .welcome-message p {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-} */
-
-/* Bouton de démarrage */
-.start-button {
-  background: linear-gradient(90deg, #ff4081, #ff79a9);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
-  transition: transform 0.3s ease;
-  animation: neonBlink 1.5s infinite alternate;
-}
-
-@keyframes neonBlink {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 64, 129, 0.8),
-      0 0 20px rgba(255, 64, 129, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(255, 64, 129, 1), 0 0 30px rgba(255, 64, 129, 0.9);
-  }
-}
-
-.start-button:hover {
-  transform: scale(1.2);
-}
 
 /* Conteneur CRUD */
 .crud-wrapper {
   width: 100%;
-  max-width: 900px;
-  transition: filter 0.3s ease, transform 0.5s ease;
+  max-width: 900px;  
   border-radius: 8px;
 }
 
-.crud-wrapper:hover {
+/* .crud-wrapper:hover {
   transform: scale(1.02);
 }
 
 .blurred {
   filter: blur(5px);
-}
-
-/* Overlay du formulaire */
-.form-overlay {
-}
+} */
 
 /* Notifications */
 .notifications {

@@ -98,5 +98,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"vue-vscode-snippets": "file:"
 	}
 }

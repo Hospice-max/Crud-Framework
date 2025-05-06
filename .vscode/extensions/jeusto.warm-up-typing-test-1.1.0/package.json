@@ -240,5 +240,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"warm-up-typing-test": "file:"
 	}
 }

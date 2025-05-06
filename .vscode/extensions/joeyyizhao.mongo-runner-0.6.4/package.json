@@ -489,5 +489,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726593776980,
 		"preRelease": false
+	},
+	"dependencies": {
+		"mongo-runner": "file:"
 	}
 }

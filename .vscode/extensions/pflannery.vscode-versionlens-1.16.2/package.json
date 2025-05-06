@@ -90,6 +90,7 @@
 		"sax": "1.4.1",
 		"semver": "7.6.3",
 		"toml-eslint-parser": "0.10.0",
+		"vscode-versionlens": "file:",
 		"yaml": "2.6.1"
 	},
 	"overrides": {

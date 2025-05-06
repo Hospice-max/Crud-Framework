@@ -70,5 +70,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"night-owl": "file:"
 	}
 }

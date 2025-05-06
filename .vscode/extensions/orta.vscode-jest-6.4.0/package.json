@@ -675,7 +675,8 @@
 	"dependencies": {
 		"istanbul-lib-coverage": "^3.2.0",
 		"istanbul-lib-source-maps": "^4.0.1",
-		"jest-editor-support": "^32.0.0-beta.1"
+		"jest-editor-support": "^32.0.0-beta.1",
+		"vscode-jest": "file:"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "^11.0.2",

@@ -49,5 +49,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726588447948,
 		"preRelease": false
+	},
+	"dependencies": {
+		"vscode-icontheme-nomo-dark": "file:"
 	}
 }

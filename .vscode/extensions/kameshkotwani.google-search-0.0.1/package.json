@@ -57,11 +57,11 @@
 		"test": "node ./node_modules/vscode/bin/test"
 	},
 	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"eslint": "^5.13.0",
+		"@types/mocha": "^2.2.42",
 		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
+		"eslint": "^5.13.0",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
 	},
 	"__metadata": {
 		"id": "4a3717df-00d2-40dd-9ed5-cea39d4d6a6d",
@@ -75,5 +75,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"google-search": "file:"
 	}
 }

@@ -112,5 +112,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726588446568,
 		"preRelease": false
+	},
+	"dependencies": {
+		"npm-intellisense": "file:"
 	}
 }

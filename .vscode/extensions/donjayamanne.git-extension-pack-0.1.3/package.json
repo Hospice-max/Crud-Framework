@@ -46,5 +46,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726593668166,
 		"preRelease": false
+	},
+	"dependencies": {
+		"git-extension-pack": "file:"
 	}
 }

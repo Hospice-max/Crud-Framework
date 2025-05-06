@@ -82,5 +82,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726588525029,
 		"preRelease": false
+	},
+	"dependencies": {
+		"node-pack": "file:"
 	}
 }

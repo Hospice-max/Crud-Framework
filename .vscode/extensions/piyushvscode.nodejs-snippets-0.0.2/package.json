@@ -29,5 +29,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726652946310,
 		"preRelease": false
+	},
+	"dependencies": {
+		"nodejs-snippets": "file:"
 	}
 }

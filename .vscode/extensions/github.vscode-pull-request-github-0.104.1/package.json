@@ -3839,6 +3839,7 @@
 		"tunnel": "0.0.6",
 		"url-search-params-polyfill": "^8.1.1",
 		"uuid": "8.3.2",
+		"vscode-pull-request-github": "file:",
 		"vscode-tas-client": "^0.1.75",
 		"vsls": "^0.3.967"
 	},

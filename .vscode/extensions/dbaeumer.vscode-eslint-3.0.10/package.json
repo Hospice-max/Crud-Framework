@@ -650,11 +650,11 @@
 		"merge-options": "^3.0.4",
 		"mocha": "^10.3.0",
 		"rimraf": "^5.0.5",
+		"shelljs": "^0.8.5",
 		"ts-loader": "^9.5.1",
 		"typescript": "^5.3.3",
 		"webpack": "^5.90.3",
-		"webpack-cli": "^5.1.4",
-		"shelljs": "^0.8.5"
+		"webpack-cli": "^5.1.4"
 	},
 	"__metadata": {
 		"id": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a",
@@ -668,5 +668,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"vscode-eslint": "file:"
 	}
 }

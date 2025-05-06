@@ -20,8 +20,7 @@
           </td>
         </tr>
       </tbody>
-    </table>
-    <button class="add-btn" @click="addItem">➕ Ajouter</button>
+    </table>    
   </div>
 </template>
 
@@ -45,9 +44,6 @@ const deleteItem = (index) => {
   addNotification("Utilisateur supprimé avec succès", "warning");
 };
 
-const addItem = (index) => {
-  emit('add', index);
-};
 </script>
 
 <style scoped>
@@ -113,14 +109,14 @@ button {
 }
 
 .add-btn {
-  background: #6200ea;
+  background: #017483be;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
 }
 
 .add-btn:hover {
-  background: #3700b3;
+  background: #017483be;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }

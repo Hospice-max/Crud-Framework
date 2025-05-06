@@ -1354,6 +1354,7 @@
 		"tmp": "^0.2.3",
 		"unzipper": "^0.10.14",
 		"vscode-extension-telemetry": "^0.4.5",
+		"vscode-kubernetes-tools": "file:",
 		"vscode-uri": "^3.0.8",
 		"yaml-ast-parser": "^0.0.43",
 		"yamljs": "^0.3.0"

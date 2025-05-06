@@ -55,5 +55,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726588510040,
 		"preRelease": false
+	},
+	"dependencies": {
+		"node-essentials": "file:"
 	}
 }

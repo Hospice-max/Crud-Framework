@@ -174,7 +174,8 @@
 		"lint": "tslint -c tslint.json -p ."
 	},
 	"dependencies": {
-		"typescript-tslint-plugin": "1.0.2"
+		"typescript-tslint-plugin": "1.0.2",
+		"vscode-typescript-tslint-plugin": "file:"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.32.0",

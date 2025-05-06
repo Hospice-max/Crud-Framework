@@ -77,5 +77,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726588447931,
 		"preRelease": false
+	},
+	"dependencies": {
+		"dotenv": "file:"
 	}
 }

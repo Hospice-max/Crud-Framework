@@ -320,11 +320,11 @@
 		"patch-dev": "npm run compile-web && node ../build/patch-local.js .vscode-oss-dev"
 	},
 	"devDependencies": {
+		"@microsoft/dev-tunnels-contracts": "^1.0.0",
 		"@types/mocha": "^9.1.1",
 		"@types/webpack-env": "^1.17.0",
 		"@typescript-eslint/eslint-plugin": "^5.30.0",
 		"@typescript-eslint/parser": "^5.30.0",
-		"@microsoft/dev-tunnels-contracts": "^1.0.0",
 		"@vscode/test-web": "^0.0.26",
 		"assert": "^2.0.0",
 		"constants-browserify": "^1.0.0",
@@ -360,5 +360,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"remote-explorer": "file:"
 	}
 }

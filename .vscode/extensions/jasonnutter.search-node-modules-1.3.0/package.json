@@ -82,5 +82,8 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1726652937823,
 		"preRelease": false
+	},
+	"dependencies": {
+		"search-node-modules": "file:"
 	}
 }

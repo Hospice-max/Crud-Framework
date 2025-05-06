@@ -53,5 +53,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"vue-vscode-extensionpack": "file:"
 	}
 }

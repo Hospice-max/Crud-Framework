@@ -11,6 +11,7 @@
   "dependencies": {
     "escodegen": "^2.0.0",
     "esprima": "^4.0.1",
+    "mongo-runner-server": "file:",
     "vscode-languageserver": "^7.0.0",
     "vscode-languageserver-textdocument": "^1.0.4"
   },

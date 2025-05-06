@@ -1309,6 +1309,7 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"dependencies": {
+		"errorlens": "file:",
 		"lodash": "^4.17.21"
 	},
 	"__metadata": {

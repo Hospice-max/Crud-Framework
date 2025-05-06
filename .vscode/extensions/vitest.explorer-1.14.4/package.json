@@ -307,5 +307,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"explorer": "file:"
 	}
 }

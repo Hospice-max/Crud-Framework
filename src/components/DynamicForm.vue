@@ -1,6 +1,6 @@
 <template>
   <div class="form-wrapper">
-    <form @submit.prevent="handleSubmit" class="dynamic-form">
+    <form @submit.prevent="handleSubmit" class="dynamic-form"  id="form">
       <div v-for="(field, index) in fields" :key="index" class="form-field">
         <label :for="field.model">{{ field.label }}</label>
         <input
@@ -12,7 +12,7 @@
         />
       </div>
       <div class="form-actions">
-        <button type="submit" class="submit-button">Soumettre</button>
+        <button type="submit" @click="reload" class="submit-button">Soumettre</button>
         <button type="button" @click="handleCancel" class="cancel-button">Annuler</button>
       </div>
     </form>
@@ -57,6 +57,12 @@ const handleCancel = () => {
   emit("cancel");
   addNotification('Opération annulée', 'info');
 };
+
+const reload = () => {
+  setTimeout(() => {
+    document.getElementById('form').reset();
+  }, 2);  
+}
 </script>
 
 <style scoped>
@@ -66,7 +72,7 @@ const handleCancel = () => {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   max-width: 450px;
-  width: 100%;
+  width: 100%;  
 }
 
 .dynamic-form {
@@ -97,7 +103,7 @@ const handleCancel = () => {
 }
 
 .form-field input:focus {
-  border-color: #6200ea;
+  border-color: #017483be;
   box-shadow: 0 0 10px rgba(98, 0, 234, 0.5);
   outline: none;
 }
@@ -107,9 +113,12 @@ const handleCancel = () => {
   justify-content: space-between;
 }
 
+ .form-wrapper:hover {
+  transform: scale(1.02);
+} 
 .submit-button,
 .cancel-button {
-  background: #6200ea;
+  background: #017483be;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -122,7 +131,7 @@ const handleCancel = () => {
 
 .submit-button:hover,
 .cancel-button:hover {
-  background: #3700b3;
+  background: #017483be;
   transform: scale(1.05);
 }
 

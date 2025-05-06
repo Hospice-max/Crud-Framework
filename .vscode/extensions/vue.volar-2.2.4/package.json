@@ -589,5 +589,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"volar": "file:"
 	}
 }

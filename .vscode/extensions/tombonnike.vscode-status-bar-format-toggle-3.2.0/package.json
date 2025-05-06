@@ -87,5 +87,8 @@
 		"pinned": false,
 		"preRelease": false,
 		"source": "gallery"
+	},
+	"dependencies": {
+		"vscode-status-bar-format-toggle": "file:"
 	}
 }
